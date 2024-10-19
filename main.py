@@ -1,12 +1,10 @@
 import requests
 import json
-import html
 import asyncio
 import websockets
 import aiohttp
 from bs4 import BeautifulSoup
 from pathlib import Path
-import sys
 import sys
 
 # generatedフォルダをPythonのモジュールパスに追加
@@ -240,12 +238,6 @@ def login(email, password):
         print(f"エラーが発生しました: {e}")
         raise
 
-import requests
-from bs4 import BeautifulSoup
-import html
-import json
-import re
-
 def get_page_info(url, session=None):
     """
     指定されたURLからページ情報を取得する
@@ -390,8 +382,8 @@ async def connect_to_websocket():
 if __name__ == "__main__":
     email = "XXX"
     password = "XXX"
-    # 対象のURL
-    url = "https://live.nicovideo.jp/watch/lv346087795"
+    # 対象のURL　例：https://live.nicovideo.jp/watch/lvxxxxxxx
+    url = ""
     try:
         # session = login(email, password)
         web_socket_url = get_page_info(url)
